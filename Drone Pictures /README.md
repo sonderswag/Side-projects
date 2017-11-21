@@ -2,6 +2,7 @@ Here are some pictures of the drone I made in my free time one summer.
 
 I was able to attach a GoPro to the drone and take some photos for the summer camp I worked at. 
 
+I call it the flying tupperware!!! Fear its might!!! 
 
 ![Image of Yaktocat](https://github.com/sonderswag/Side-projects/blob/master/Drone%20Pictures%20/20171121_124302.jpg)
 
