@@ -1,0 +1,25 @@
+<script>
+
+var test = 'aab2m3m'
+
+check = (str,char) => {
+  var count = 0
+  for (i in str) {
+    if (str[i] === char) {
+      count++
+    }
+  }
+  return count === 1
+}
+
+nonRepeat = (str) => {
+  str = str.split("")
+  var res = str.filter((char) => check(str,char))
+  console.log(res)
+  return res[0]
+
+}
+
+console.log(nonRepeat(test))
+
+</script>

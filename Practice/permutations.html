@@ -1,0 +1,29 @@
+<script>
+  var test = "ABC";
+
+
+  flip = (arr,in1,in2) => {
+    var temp = arr[in1]
+    arr[in1] = arr[in2]
+    arr[in2] = temp
+    return arr
+  }
+
+  perm = (str) => {
+    str = str.split('')
+    var ret = []
+    for (var i = 0; i < str.length ; i++) {
+      for (var j =0 ; j < str.length ; j++) {
+        if (i !== j ) {
+           ret.push(flip(str,i,j).join())
+        }
+      }
+    }
+    return ret
+  }
+
+
+
+  console.log(perm(test));
+
+</script>

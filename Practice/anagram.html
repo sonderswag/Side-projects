@@ -1,0 +1,22 @@
+<script>
+
+var t1 = 'hello'
+var t2 = 'llohe'
+var t3 = 'lohe'
+var t4 = 'lloha'
+
+anagramCheck = (str1,str2) => {
+  if (str1.length !== str2.length) {
+    return false
+  }
+  str1 = str1.split('')
+  str2 = str2.split('')
+  return str1.sort().join('') === str2.sort().join('')
+
+}
+
+console.log(anagramCheck(t1,t2))
+console.log(anagramCheck(t1,t3))
+console.log(anagramCheck(t1,t4))
+
+</script>

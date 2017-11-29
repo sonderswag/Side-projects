@@ -1,0 +1,15 @@
+<script>
+  var test = "thisIsToTest";
+
+  removeChar = (str,char) => {
+    var ret = ""
+    for (i in str) {
+      i = str[i]
+      ret+= i!==char ? i : ""
+    }
+    return ret
+  }
+
+  console.log(removeChar(test,'s'))
+
+</script>

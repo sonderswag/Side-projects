@@ -1,0 +1,21 @@
+<script>
+
+var test = 'aabbbccc'
+
+countChar = (str) => {
+  var res = {}
+  str = str.split('')
+  for (i in str ) {
+    if (res[str[i]] === undefined) {
+      res[str[i]] = 1
+    }
+    else {
+      res[str[i]]++
+    }
+  }
+  return res
+}
+
+console.log(countChar(test))
+
+</script>

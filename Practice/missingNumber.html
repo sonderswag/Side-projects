@@ -1,0 +1,25 @@
+<script>
+
+var t1 = [1,2,3,5] //4
+var t2 = [40,41,42,43,45,46,44] //44
+
+//not the most efficient
+findMissing = (arr) => {
+  var res = arr.filter((value,index) => value+1 !== arr[index+1])
+  res.pop()
+  return ++res[0]
+}
+
+// more efficient, allows for early stopping
+findMissing2 = (arr) => {
+  for (var i = 0 ; i < arr.length-1 ; ++i) {
+    if (arr[i]+1 !== arr[i+1]) {
+      return arr[i]+1
+    }
+  }
+  return false
+}
+console.log(findMissing(t1))
+console.log(findMissing2(t2))
+
+</script>

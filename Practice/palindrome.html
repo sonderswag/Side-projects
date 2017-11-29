@@ -1,0 +1,63 @@
+<script>
+  var test = 'bllblal'
+  var test2 = 'llmm'
+
+  palindromeTest = (str) => {
+
+    for (var i = 0; i < str.length ; i++) {
+      if (str[i] !== str[str.length-1-i])
+      return false
+    }
+    return true
+  }
+
+  console.log(palindromeTest(test))
+  console.log(palindromeTest(test2))
+
+
+  palindromeTest2 = (str) => {
+    var len = str.length
+    var max = {
+      i: 0,
+      j: 0
+    }
+    console.log(len)
+    //truth table for palidrome
+    var table = new Array(len)
+    for (var i = 0 ; i < len ; ++i) {
+      table[i] = new Array(len)
+    }
+    //populate inital identity matrix
+    for (i in str) {
+      table[i][i] = true
+    }
+
+    //check to see if any pair is a palidrome
+    for (var i = 0 ; i < len-1 ; ++i) {
+      table[i][i+1] = str[i] === str[i+1]
+    }
+
+    //check all grouping greater then 3
+    for (var k = 2 ; k < len ; ++k) {
+      for (var i = 0 ; i < len-k ; ++i) {
+        var j = i+k
+        if (table[i+1][j-1] && str[i] === str[j]) {
+          table[i][j] = true
+          max.i = i
+          max.j = j
+        }
+        else {
+          table[i][j] = false
+        }
+      }
+    }
+
+
+    console.log(table)
+    console.log(str.slice(max.i,max.j+1))
+  }
+
+
+  console.log(palindromeTest2(test))
+
+</script>
