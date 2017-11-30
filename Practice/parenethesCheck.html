@@ -3,7 +3,6 @@
 var test = '(hell(there(is(a(test)))))'
 
 checkparen = (str) => {
-  console.log(str.length)
   var open = 0;
   var close =0 ;
   for (var i = 0 ; i < str.length ; i++) {
@@ -13,8 +12,10 @@ checkparen = (str) => {
     else if (str[i] === ')') {
       close++
     }
+    if(close > open) {
+      return false
+    }
   }
-  console.log(open,close)
   return open === close ?  true :  false;
 }
 

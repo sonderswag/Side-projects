@@ -1,0 +1,40 @@
+<script>
+
+var t0 = [1,4,7,9,11,3,5,6,33,1]
+
+sum10 = (arr) => {
+  //type check for arr
+
+  if (typeof(arr) !== 'object') {
+    return null
+  }
+
+  var less10 = []
+  var pairList = []
+
+  for (i in arr) {
+    //type check for number
+    if (typeof(arr[i]) !== 'number') {
+      return null
+    }
+
+    if (arr[i] < 10) {
+      //first check to see if it makes a pair
+      for (var j = 0 ; j < less10.length ; j++) {
+        if (arr[i] + less10[j] === 10) {
+          pairList.push([arr[i],less10[j]])
+        }
+      }
+      less10.push(arr[i])
+    }
+
+  }
+  return pairList
+
+
+}
+
+
+console.log(sum10(t0))
+
+</script>

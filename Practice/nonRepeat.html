@@ -1,4 +1,5 @@
 <script>
+// simple code but highly inefficient.
 
 var test = 'aab2m3m'
 
@@ -12,11 +13,12 @@ check = (str,char) => {
   return count === 1
 }
 
+//finds all the non repeated characters
 nonRepeat = (str) => {
   str = str.split("")
   var res = str.filter((char) => check(str,char))
   console.log(res)
-  return res[0]
+  return res
 
 }
 
